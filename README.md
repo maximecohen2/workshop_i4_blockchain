@@ -8,10 +8,11 @@
    > virtualenv3.6 venv-blockchain
 3. Activer le virtualenv
 
-   Linux:
-   > source venv-blockchain/bin/activate
-   Windows:
-   > venv-blockchain/jesaisplus
+	Linux:
+	> source venv-blockchain/bin/activate
+
+	Windows:
+	> venv-blockchain/jesaisplus
 
 4. Installer les dépendances
    > pip install -r requirements.txt
