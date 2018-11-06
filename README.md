@@ -44,7 +44,6 @@ Le formulaire de contact contiendra les champs suivants:
 - Téléphone
 - Email
 - Numéro de contrat
-- Votre message
 - Contact
 
 Bootstrap sera utilisé.
