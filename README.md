@@ -1,5 +1,9 @@
 # Blockchain pour assurance agricole
 
+## Base de données
+La base de donnée ne doit contenir que les informations client et
+les coordonnées banquaires, le contrat sera stocké dans la blockchain.
+
 ## UI
 
 Le formulaire de contact contiendra les champs suivants:
