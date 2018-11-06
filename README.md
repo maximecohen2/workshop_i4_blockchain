@@ -7,10 +7,12 @@
 2. Créer un virtualenv (pas dans le projet)
    > virtualenv3.6 venv-blockchain
 3. Activer le virtualenv
+
    Linux:
 	   > source venv-blockchain/bin/activate
    Windows:
 	   > venv-blockchain/jesaisplus
+
 4. Installer les dépendances
    > pip install -r requirements.txt
 5. Faire les migrations de la base de données
