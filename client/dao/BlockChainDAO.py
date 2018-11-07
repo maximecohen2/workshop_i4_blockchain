@@ -12,15 +12,14 @@ class BlockChainDAO:
         self.baseUrl = "https://public.opendatasoft.com/api/records/1.0/search/"
         self.manager = Manager()
 
-    def getDataCatastrophe(self, commmune):
-        urlParams = self.buildParamsUrl(commmune)
+    def getDataCatastrophe(self):
+        urlParams = self.buildParamsUrl()
         return self.responseapi(urlParams)
 
-    def buildParamsUrl(self, commune):
+    def buildParamsUrl(self):
         params = {}
         params['dataset'] = "gaspar-arretes-de-catastrophes-naturelles"
-        params['q'] = commune
-        params['rows'] = 15
+        params['rows'] = 1000
         params['sort'] = "dat_pub_arrete"
         return params
 
@@ -28,8 +27,12 @@ class BlockChainDAO:
         urlEncode = urlencode(paramsUrl)
         url = self.baseUrl + '?' + urlEncode
         response = requests.get(url)
+        print(response.content)
         data = json.loads(response.content)
         cataList = [CatastropheData]
         for k in data['records']:
             cataList.append(self.manager.createCatastrohpeData(k))
         return cataList
+
+block = BlockChainDAO()
+block.getDataCatastrophe()

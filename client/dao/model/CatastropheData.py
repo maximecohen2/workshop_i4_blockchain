@@ -10,3 +10,6 @@ class CatastropheData:
         self.libellePci = libellePci
         self.dateDebutCata = dateDebutCata
         self.dateFinCata = dateFinCata
+
+    def _getTypeCatastrophe_(self):
+        return self.typeCatastrophe
