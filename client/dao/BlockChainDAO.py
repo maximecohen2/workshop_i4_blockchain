@@ -33,9 +33,3 @@ class BlockChainDAO:
         for k in data['records']:
             cataList.append(self.manager.createCatastrohpeData(k))
         return cataList
-
-
-
-
-blockChainDAO = BlockChainDAO()
-blockChainDAO.getDataCatastrophe("Talence")
