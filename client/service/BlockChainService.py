@@ -8,6 +8,7 @@ class BlockChainService:
     def __init__(self):
         self.blockChainDAO = BlockChainDAO()
 
+
     def getCataData(self):
         listPersonne = []
         cataList = self.blockChainDAO.getDataCatastrophe()
@@ -22,6 +23,7 @@ class BlockChainService:
                 listPersonne.append(DataPersonne(personne, addresse, contrat))
         return listPersonne
 
+
     def verifDate(self, catalist):
         now = datetime.datetime.now()
         date = now.strftime("%Y-%m-%d")
@@ -31,12 +33,14 @@ class BlockChainService:
                 cataListOfficiel.append(cata)
         return cataListOfficiel
 
+
     def getListCommune(self, catalist):
         listCommune = []
         for cata in catalist:
             if(listCommune.__contains__(cata.libelleCommune)):
                 listCommune.append(cata.libelleCommune)
         return listCommune
+
 
     def getListTypeCata(self, catalist):
         listTypeCata = []
