@@ -18,7 +18,10 @@ from django.urls import path
 
 from django.views.generic import TemplateView
 
+from customers import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='index.html'))
+    path('', views.inscription, name='inscription'),
+    path('success', views.success, name='success')
 ]
